@@ -67,7 +67,7 @@ nav a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/images/Coding.gif'); /* Background GIF */
+    background-image: url('images/coding.gif'); /* Background GIF */
     background-size: cover; /* Cover the entire section */
     background-position: center; /* Center the background */
     filter: blur(10px); /* Blur the background */
