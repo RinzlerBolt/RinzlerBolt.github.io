@@ -107,3 +107,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+document.getElementById("hamburger").addEventListener("click", function() {
+    const nav = document.getElementById("nav").querySelector('ul');
+    nav.classList.toggle('active');
+});
+

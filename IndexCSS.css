@@ -51,6 +51,18 @@ nav a:hover {
     color: #903749;
 }
 
+/* Basic styles for hamburger */
+.hamburger {
+    display: none; /* Hide by default */
+    font-size: 30px; /* Adjust size as needed */
+    cursor: pointer;
+}
+
+/* Hide nav links by default */
+nav {
+    display: flex; /* Display normally */
+}
+
 .title-section {
     position: relative;
     height: 100vh; /* Adjust the height as needed */
@@ -371,13 +383,30 @@ h1, h2, h3, h4 {
     }
     
     nav ul {
-        display: flex; /* Horizontal navigation */
-        list-style: none; /* Remove bullet points */
-        padding: 0; /* Remove default padding */
+        display: none; /* Hide the menu */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Overlay the menu */
+        background-color: white; /* Set background color */
+        width: 100%; /* Full width */
+        top: 60px; /* Adjust based on header height */
+        left: 0; /* Align to the left */
+    }
+
+    nav ul.active {
+        display: flex; /* Show menu when active */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger */
     }
 
     nav ul li {
         margin: 0 15px; /* Add space between navigation items */
+    }
+
+    /* Adjust the main content padding */
+    #main-content {
+        padding-top: 70px; /* Prevent content from hiding behind the menu */
     }
 }
 
