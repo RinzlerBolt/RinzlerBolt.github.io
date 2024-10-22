@@ -37,8 +37,9 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 100px;
+    gap: 0px;
 }
+
 
 nav a {
     color: #e84545;
@@ -256,14 +257,11 @@ ul {
 }
 
 .about-image img {
-    width: 250px;
+    width: 300px;
     height: auto;
+    object-fit: cover;
     border-radius: 8px;
-    float: right;
-    right: 300px;
-    margin-top: -225px;
-    flex-shrink: 0; /* Prevent the image from shrinking */
-    position: absolute;
+    position: inherit;
 }
 
 #hobbies {
@@ -314,7 +312,6 @@ ul {
     object-fit: cover;
     border-radius: 10px;
     margin-right: 20px;
-    align-items: center;
 }
 
 
@@ -325,7 +322,7 @@ h3 {
 footer {
     margin-top: auto;
     text-align: left;
-    padding: 10px;
+    padding: 0px;
     background-color: #1a1a2e;
     border-top: 2px solid #e84545;
     color: #f2f2f2;
@@ -346,25 +343,83 @@ footer {
 
 /* Responsive styles for mobile */
 @media only screen and (max-width: 960px) {
+    #main-content {
+        position: sticky;
+        top: 0; /* Keeps the header at the top */
+        background-color: #1a1a2e; /* Header background */
+        z-index: 1000; /* High z-index for visibility */
+    }
+    
+    /* Navigation Menu Styles */
+    nav {
+        overflow: hidden; /* Ensures no overflow from the menu */
+    }
+    
+    /* Hide the links inside the navigation menu by default */
     nav ul {
         display: none; /* Hide the menu by default on mobile */
         flex-direction: column; /* Stack items vertically */
-        position: absolute; /* Overlay the menu */
-        background-color: white; /* Set background color */
+        /*position: absolute; /* Overlay the menu */
+        background-color: #1a1a2e; /* Set background color */
         width: 100%; /* Full width */
-        top: 60px; /* Adjust based on header height */
+        top: 0px; /* Adjust based on header height */
         left: 0; /* Align to the left */
         z-index: 1; /* Ensure it appears above other content */
+        padding: 10px; /* Remove default padding */
+        text-align: left;
     }
 
+    /* Normal Desktop Ver  */
+    /* list-style: none; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* gap: 100px; */
+
+    
+    /* Show menu when active */
     nav ul.active {
         display: flex; /* Show menu when active */
     }
-
+    
+    /* Navigation links styling */
+    nav a {
+        color: #e84545; /* Link color */
+        padding: 15px 0px; /* Add padding for better touch targets */
+        text-decoration: none; /* Remove underline */
+        font-size: 1.2rem; /* Font size for mobile */
+        display: block; /* Make each link take a full line */
+        width: 100%; /* Full width for better touch area */
+        text-align: center; /* Center align text */
+    }
+    
+    /* Add a hover effect */
+    nav a:hover {
+        /*background-color: #000000; /* Change background on hover */
+        color: #903749; /* Change text color on hover */
+    }
+    
+    /* Style the hamburger menu */
     .hamburger {
         display: block; /* Show hamburger on mobile */
         cursor: pointer; /* Change cursor to pointer */
+        color: #e84545; /* Hamburger icon color */
+        font-size: 2rem; /* Size of the hamburger icon */
     }
+
+    .hamburger:hover {
+        color: #903749;
+    }
+
+    #Social img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-right: 20px;
+        align-items: center;
+    }
+
+    
 }
 
 /* Ensure hamburger is hidden on larger screens */
@@ -375,7 +430,24 @@ footer {
 
     nav ul {
         display: flex; /* Show menu items by default */
+        gap: 100px;
     }
+
+    footer {
+        padding: 10px;
+    }
+
+    .about-image img {
+        width: 250px;
+        height: auto;
+        object-fit: contain;
+        border-radius: 8px;
+        position: relative;
+        right: -575px;
+        top: -150px;
+    }
+
+
 }
 
 

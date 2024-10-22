@@ -18,11 +18,9 @@
             <header>
                 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
                 <img src="../images/Website_Logo2.png" alt="Logo Image" class="Logo-Pic">
-                <div class="hamburger" id="hamburger">
-                    &#9776; <!-- This is the hamburger icon -->
-                </div>
+                <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776; <!-- This is the hamburger icon --></div>
                 <nav aria-label="Main navigation">
-                    <ul>
+                    <ul id="nav-menu"> <!-- Changed id from nav-nenu to nav-menu -->
                         <li><a href="#Awards">Awards</a></li>
                         <li><a href="#Portfolio">Portfolio</a></li>
                         <li><a href="#about">About</a></li>
@@ -33,6 +31,18 @@
                 </nav>
             </header>
         </div>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                function toggleMenu() {
+                    const navMenu = document.getElementById('nav-menu'); // Make sure this matches the ID
+                    navMenu.classList.toggle('active');
+                }
+        
+                // Attach the click event to the hamburger icon
+                document.getElementById('hamburger').onclick = toggleMenu;
+            });
+        </script>
 
         <!-- Title Section -->
         <section class="title-section">
@@ -373,5 +383,7 @@
                 });
             });
         </script>
+
+        
     </body>
 </html>
