@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Jake Lawson</title>
+        <link rel="stylesheet" href="IndexCSS.css">
+    </head>
+
+    <!-- <div id="intro-screen">
+        <h1>Welcome!</h1>
+    </div> -->
+    <!-- Sticky Bar & Logo -->
+
+    <body>
+        <div id="main-content">
+            <header>
+                <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+                <img src="../images/Website_Logo2.png" alt="Logo Image" class="Logo-Pic">
+                <nav aria-label="Main navigation">
+                    <ul>
+                        <li><a href="#Awards">Awards</a></li>
+                        <li><a href="#Portfolio">Portfolio</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#Social">Social</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#CV">CV</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <!-- Title Section -->
+        <section class="title-section">
+            <div class="title-background"></div> <!-- Separate div for the background -->
+            <div class="title-content">
+                <h1>Jake Lawson: <span id="rotating-text">Researcher</span></h1>
+            </div>
+        </section>
+
+        <section id="Awards">
+            <h2>My Awards</h2>
+            <div class="Award-to-Jake">
+                <h3>BeTamworth Award</h3>
+                <p>
+                    On behalf of Coliseum Cards, In 2018 I was proudly awarded the BeTamworth Award along with the team at Coliseum Cards.
+                    The award was presented by the then Mayor Richard Kingston, 
+                    the award given was for our work in the local commmunity for adults and children with additional needs, 
+                    also for creating a positive impact on the town of Tamworth when we host major tournamnets, 
+                    bringing players for all over the country to use the local shops and cafes.
+                    My role was to teach children and adults how to play the trading card games.
+                    With the work of Sharon and Mark Lawson who are the owners, we made a safe environment
+                    for our players and  visitors.   
+                </p>
+            </div>
+        </section>
+
+        <section id="Portfolio">
+            <h2>Portfolio</h2>
+
+            <!-- Year Buttons -->
+            <div class="year-buttons">
+                <button onclick="toggleYear('year-2024')">2024</button>
+                <button onclick="toggleYear('year-2023')">2023</button>
+                <button onclick="toggleYear('year-2022')">2022</button>
+            </div>
+
+            <!-- Year 2024 -->
+            <div class="year-section" id="year-2024">
+                <h3>2024</h3>
+                <a href="HighwayCode.html" class="project-link">
+                    <div class="project-card">
+                        <h3>Highway Code</h3>
+                        <img src="images/HighwayCodeLogo.png" alt="Game 3 Image" class="project-image">
+                        <p>A brief description of Game 3 developed in 2024.</p>
+                    </div>
+                </a>
+                <!-- <div class="project-card">
+                    <h3>(Time Crisis Inspired Game)</h3>
+                    <img src="images/game3.png" alt="Game 3 Image" class="project-image">
+                    <p>A brief description of Game 3 developed in 2024.</p>
+                </div> -->
+                <div class="project-card">
+                    <a href="TankSplineWave.html" class="project-link">
+                        <h3>Tank Simulator, Wave Spawner, and Spline Generation</h3>
+                        <img src="images/TankSplineWaveLogo.png" alt="Game 4 Image" class="project-image">
+                        <p>A brief description of Game 3 developed in 2024.</p>
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="AI_Pathfinding.html" class="project-link">
+                        <h3>AI Pathfinding</h3>
+                        <img src="images/AIPathfindingLogo.png" alt="Game 4 Image" class="project-image">
+                        <p>A brief description of Game 3 developed in 2024.</p>
+                    </a>
+                </div>
+            </div>
+            
+            
+        <!-- Year 2023 -->
+        <div class="year-section" id="year-2023">
+            <h3>2023</h3>
+            <div class="project-card">
+                <a href="Wolf's_Reign.html" class="project-link">
+                    <h3>Wolf's Reign</h3>
+                    <img src="images/WolfsReignLogo.png" alt="Game 1 Image" class="project-image">
+                    <p>A brief description of Game 1 developed in 2023.</p>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="CSGO_Pathfinding.html" class="project-link">
+                    <h3>CS:GO Styled AI</h3>
+                    <img src="images/CSGOAILogo.png" alt="Game 2 Image" class="project-image">
+                    <p>A brief description of Game 2 developed in 2023.</p>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="Dungeons.html" class="project-link">
+                    <h3>Procedurally Generated Dungeons</h4>
+                    <img src="images/ProcDungeonLogo.png" alt="Game 3 Image" class="project-image">
+                    <p>A brief description of Game 3 developed in 2023</p>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="Heaven.html" class="project-link">
+                    <h3>Heaven</h5>
+                    <img src="images/HeavenLogo.png" alt="Game 4 Image" class="project-image">
+                    <p>A brief description of Game 3 developed in 2023</p>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="MarioEngineClone.html" class="project-link">
+                    <h3>Mario Brothers Clone</h5>
+                    <img src="images/MarioBrosClone.png" alt="Game 4 Image" class="project-image">
+                    <p>A brief description of Game 3 developed in 2023</p>
+                </a>
+            </div>
+        </div>
+    
+        <!-- Year 2022 -->
+        <div class="year-section" id="year-2022">
+            <h3>2022</h3>
+            <div class="project-card">
+                <a href="1945Clone.html" class="project-link">
+                    <h3>2D Top-Down 1945 Clone</h3>
+                    <img src="images/1945CloneLogo.png" alt="Game 1 Image" class="project-image">
+                    <p>A brief description of Game 1 developed in 2022.</p>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="MarbleMadness.html" class="project-link">
+                    <h3>Marble Madness Clone</h3>
+                    <img src="images/MadnessClone.png" alt="Game 2 Image" class="project-image">
+                    <p>A brief description of Game 2 developed in 2022.</p>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="Sentinel.html" class="project-link">
+                    <h3>Sentinel</h3>
+                    <img src="images/SentinelLogo.png" alt="Game 3 Image" class="project-image">
+                    <p>A brief description of Game 1 developed in 2022.</p>
+                </a>
+            </div>
+            <div class="project-card">
+                <a href="Virtuar.html" class="project-link">
+                    <h3>Virtuar</h3>
+                    <img src="images/VirtuarLogo.png" alt="Game 4 Image" class="project-image">
+                    <p>A brief description of Game 2 developed in 2022.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+            
+
+            <!-- Add more year sections as needed -->
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hi! My name is Jake Lawson. I am a game programming enthusiast.
+                 I dedicate my time to creating innovative games and programs,
+                  researching, and writing papers.
+            </p>
+        </section>
+
+        <section id ="experience-education-section">
+            <div class="experience-section">
+                <h3>Experience</h3>
+                <div class="experience-item">
+                    <h4>Coliseum Cards (Retail Company) 2013 - Present</h4>
+                    <p>Working in a retail company specializing in trading cards and collectibles.
+                        I also create and host official tournaments in store for Yugioh, Magic The Gathering,
+                         Pokemon and Lorcana.
+                          I proudly became an Official Konami Yu-Gi-Oh! Judge in November 2023.
+                    </p>
+                </div>
+                <div class="experience-item">
+                    <h4>Asmodee Game Demo Team 2023 - Present</h4>
+                    <p>Demonstratimg and promoting various board and card games for Asmodee.
+                        I am part of the demonstration team for Asmodee.
+                        I have worked at the UK Games Expo held at The NEC in Birmingham.
+                         My roles included teaching various board games with the general public,
+                         helped promote and sell the games demonstrated. I also helped to set and break down the demonstration areas.
+                    </p>
+                </div>
+                <div class="experience-item">
+                    <h4>University of Staffordshire Ambassador 2022 - Present</h4>
+                    <p>
+                        I am a proud representive of Staffordshire University in various outreach programs and events. The roles I have undertaken have been, guiding visitors for the Graduation events,
+                         I have helped with their open days and also during a large corporate event i helped direct attendees to their car parking spaces.
+                    </p>
+                </div>
+
+            <div class="education-section">
+                <h3>Education</h3>
+                    <div class="education-item">
+                        <h4>Staffordshire University (2022 - 2025)</h4>
+                        <p>Something goes here</p>
+                    </div>
+                    <div class="education-item">
+                        <h4>Hinckley College (2020 - 2022)</h4>
+                        <p>I studied an Extended BTEC Diploma in Game Design, this spanned over 2 years. I learnt how to research and set up my own video game business,
+                            Researched the Inudstry Market, and work with AAA Game Engines like Game Maker Studio and Unreal Engine 4.3. I achieved a Triple Distinction
+                            in this topic, equivilating to an A*.    
+                        </p>
+                    </div>
+                    <div class="education-item">
+                        <h4>Hinckley College (2019 - 2020)</h4>
+                        <p>As my first step into the Games Industry, I began with a Level 2 in Games Design.
+                            We designed a game, story, mechanics, and systems for our game. We played around with Game Maker Studio.
+                            My Game was called Exerea at War, a 2D side-scrolling platformer with 3 different play styles.
+                            I achieved a Distinction on this subject.
+                        </p>
+                    </div>                   
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <h3>Skills Learnt</h3>
+                <ul>
+                    <li>Programming Languages and APIs: C++, C#, Python, JavaScript, HTML, CSS, SQL, C</li>
+                    <li>Programming Skills: Test-Driven Development, 3D Math, Linear Algebra, Version Control</li>
+                    <li>Game Engines: Unreal Engine, CryEngine, Unity, Godot, Game Maker Studio </li>
+                    <li>Interpersonal Skills: Leadership, Self Motivation, Problem Solving, Networking, Researching</li>
+                    <li>Tools: Blender, 3DSMAX, Substance Painter, FL Studio, Git, Github </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="hobbies" class="content-box">
+            <h2>My Hobbies</h2>
+
+            <div class="hobby">
+                <img src="images/DivingHobby.png" alt="Scuba Diving">
+                <div class="hobby-content">
+                    <h3>Scuba Diving</h3>
+                    <p>Whilst on Holiday in July 2024 In Cape Verde I became an Padi Open Water Diver, enjoying over ten dives on my holiday.
+                        August 2024 I went back to Cape Verde and took my advanced open water diving course which I passed and also the Nitrox Air Course.
+                         I enjoyed sixteen dives this holiday. I am looking forward to improving my new found hobby and I'm passionate about looking after our oceans.
+                    </p>
+                </div>
+            </div>
+
+            <div class="hobby">
+                <img src="images/DrawingHobby.png" alt="Drawing">
+                <div class="hobby-content">
+                    <h3>Art</h3>
+                    <p>In my free time, I enjoy creating digital art across various mediums, including both 2D and 3D.
+                         I use Substance Painter to apply detailed textures to 3D models and Krita for developing digital illustrations.
+                          My work spans a diverse range of subjects, from anthropomorphic and mechanical characters designs.
+                           Occasionally, I explore other themes by sketching fighter jets, cars, and other vehicles.
+                    </p>
+                </div>
+            </div>
+
+            <div class="hobby">
+                <img src="images/HistorianHobby.png" alt="Historian">
+                <div class="hobby-content">
+                    <h3>Historian</h3>
+                    <p>I have a deep interest in exploring and researching history across various eras, with a particular focus on the 1900s.
+                         I enjoy visiting historic sites from this period and studying both military and civilian vehicles to understand their historical significance.
+                          For example, I often compare aircraft like the British Spitfire and the German Messerschmitt Bf 109, analyzing their design, performance,
+                           and impact during World War II. I am eager to expand my knowledge further by traveling the world and uncovering more about our world.
+                    </p>
+                </div>
+            </div>
+
+            <div class="hobby">
+                <img src="images/CardHobby.png" alt="CardGames">
+                <div class="hobby-content">
+                    <h3>Card & Board Games</h3>
+                    <p>I enjoy playing a wide range of card and board games, with a particular focus on Yu-Gi-Oh!, Magic: The Gathering, and Lorcana.
+                         I also like cooperative board games such as Pandemic, Castle Panic, Not Alone, and Hanabi.
+                          In addition, I have experience playing Dungeons & Dragons. As mentioned earlier, I am a certified Konami Yu-Gi-Oh! Judge.</p>
+                </div>
+            </div>
+
+            <div class="hobby">
+                <img src="images/DJHobby.png" alt="DJ">
+                <div class="hobby-content">
+                    <h3>DJ</h3>
+                    <p>I mix a variety of genres, including Drum and Bass, House, and Hardstyle, blending them into unique tracks. In my spare time,
+                        I dedicate my time into experimenting with new songs and exploring other genres to expand my musical range.
+                         My goal is to take my skills public, performing at parties, events, and other venues.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="Social">
+            <h2>Socials</h2>
+            <p>Here are some of my Socials</p>
+            <a href="https://www.linkedin.com/in/jake-lawson-6a79b4302/"target="_blank" rel="noopener noreferrer">
+                <img src="images/LinkedinLogo.png" alt="LinkedinLogo">
+            </a>
+            <a href="https://github.com/RinzlerBolt"target="_blank" rel="noopener noreferrer">
+                <img src="images/GithubLogo.png" alt="GithubLogo">
+            </a>
+            
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                Let's connect! Reach out to me at 
+                <a href="mailto:jakelawdev@outlook.com">jakelawdev@outlook.com</a>.
+            </p>
+        </section>
+
+        <footer>
+            <p>
+                &copy; 2024 Jake Lawson. All rights reserved. This website was designed in HTML, CSS, and JS. I wanted to test myself. Email: jakelawdev@outlook.com
+            </p>
+            <img src="images/Website_Logo2.png" alt="Logo-Pic-Footer" class="Footer-Logo">
+            <a href="https://www.linkedin.com/in/jake-lawson-6a79b4302/"target="_blank" rel="noopener noreferrer" >
+                <img src="images/LinkedinLogo.png" alt="LinkedinLogo" class="Footer-Logo">
+            </a>
+            <a href="https://github.com/RinzlerBolt"target="_blank" rel="noopener noreferrer">
+                <img src="images/GithubLogo.png" alt="GithubLogo" class="Footer-Logo">
+            </a>
+        </footer>
+
+        <script src="Index.js"></script>
+
+        <script>
+            document.querySelectorAll('nav ul li a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerOffset = document.querySelector('header').offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        window.scrollTo({ top: offsetPosition + -20, behavior: 'smooth' });
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
