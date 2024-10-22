@@ -81,6 +81,11 @@ document.querySelectorAll(".project-card").forEach(card => {
     });
 });
 
+document.getElementById("hamburger").addEventListener("click", function() {
+    const nav = document.getElementById("nav").querySelector('ul');
+    nav.classList.toggle('active');
+});
+
 // // Wait until the page fully loads
 // window.onload = () => {
 //     const introScreen = document.getElementById('intro-screen');
@@ -108,8 +113,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-document.getElementById("hamburger").addEventListener("click", function() {
-    const nav = document.getElementById("nav").querySelector('ul');
-    nav.classList.toggle('active');
-});
+
 
