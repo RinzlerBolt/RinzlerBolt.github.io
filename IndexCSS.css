@@ -422,4 +422,8 @@ h1, h2, h3, h4 {
         display: inline-block; /* Align project cards horizontally */
         margin: 10px; /* Space between cards */
     }
+
+    .hamburger {
+        display: none;
+    }
 }
