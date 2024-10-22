@@ -86,6 +86,11 @@ document.getElementById("hamburger").addEventListener("click", function() {
     nav.classList.toggle('active');
 });
 
+function toggleMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.toggle('active'); // Toggle 'active' class to show/hide menu
+}
+
 // // Wait until the page fully loads
 // window.onload = () => {
 //     const introScreen = document.getElementById('intro-screen');

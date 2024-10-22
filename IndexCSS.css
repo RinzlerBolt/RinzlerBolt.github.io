@@ -51,18 +51,6 @@ nav a:hover {
     color: #903749;
 }
 
-/* Basic styles for hamburger */
-.hamburger {
-    display: none; /* Hide by default */
-    font-size: 30px; /* Adjust size as needed */
-    cursor: pointer;
-}
-
-/* Hide nav links by default */
-nav {
-    display: flex; /* Display normally */
-}
-
 .title-section {
     position: relative;
     height: 100vh; /* Adjust the height as needed */
@@ -115,12 +103,6 @@ nav {
     50% {
         opacity: 0; /* Halfway through the animation, make it invisible */
     }
-}
-
-.header, .title-section, .portfolio, .about-container, .experience-section {
-    max-width: 1200px; /* Max width for larger screens */
-    margin: 0 auto; /* Center the content */
-    padding: 10px; /* Add some padding */
 }
 
 .Logo-Pic {
@@ -361,35 +343,18 @@ footer {
     /* border-radius: 25%; */
 }
 
-/* Base styles for mobile devices */
-body {
-    font-size: 16px; /* Adjust base font size */
-}
 
-h1, h2, h3, h4 {
-    margin: 0; /* Reset margins for headers */
-}
-
-/* Styles for larger screens */
-@media only screen and (min-width:320px) {
-    /* Add styles for tablet and larger screens */
-    body {
-        font-size: 18px; /* Adjust base font size for larger screens */
-    }
-    
-    header {
-        display: flex; /* Use flexbox for header layout */
-        justify-content: space-between; /* Space out logo and navigation */
-    }
-    
+/* Responsive styles for mobile */
+@media only screen and (max-width: 960px) {
     nav ul {
-        display: none; /* Hide the menu */
+        display: none; /* Hide the menu by default on mobile */
         flex-direction: column; /* Stack items vertically */
         position: absolute; /* Overlay the menu */
         background-color: white; /* Set background color */
         width: 100%; /* Full width */
         top: 60px; /* Adjust based on header height */
         left: 0; /* Align to the left */
+        z-index: 1; /* Ensure it appears above other content */
     }
 
     nav ul.active {
@@ -397,33 +362,20 @@ h1, h2, h3, h4 {
     }
 
     .hamburger {
-        display: block; /* Show hamburger */
-    }
-
-    nav ul li {
-        margin: 0 15px; /* Add space between navigation items */
-    }
-
-    /* Adjust the main content padding */
-    #main-content {
-        padding-top: 70px; /* Prevent content from hiding behind the menu */
+        display: block; /* Show hamburger on mobile */
+        cursor: pointer; /* Change cursor to pointer */
     }
 }
 
-/* Styles for desktop */
-@media only screen and (min-width:769px) {
-    /* Additional styles for desktop screens */
-    .year-buttons {
-        display: flex; /* Arrange buttons in a row */
-        justify-content: center; /* Center the buttons */
-    }
-
-    .project-card {
-        display: inline-block; /* Align project cards horizontally */
-        margin: 10px; /* Space between cards */
-    }
-
+/* Ensure hamburger is hidden on larger screens */
+@media only screen and (min-width: 961px) {
     .hamburger {
-        display: none;
+        display: none; /* Hide hamburger on desktop */
+    }
+
+    nav ul {
+        display: flex; /* Show menu items by default */
     }
 }
+
+
