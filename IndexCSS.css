@@ -105,6 +105,12 @@ nav a:hover {
     }
 }
 
+.header, .title-section, .portfolio, .about-container, .experience-section {
+    max-width: 1200px; /* Max width for larger screens */
+    margin: 0 auto; /* Center the content */
+    padding: 10px; /* Add some padding */
+}
+
 .Logo-Pic {
     width: 75px;
     border-radius: 50%;
@@ -343,55 +349,48 @@ footer {
     /* border-radius: 25%; */
 }
 
+/* Base styles for mobile devices */
+body {
+    font-size: 16px; /* Adjust base font size */
+}
 
-/* Mobile Styles */
-@media (max-width: 768px) {
+h1, h2, h3, h4 {
+    margin: 0; /* Reset margins for headers */
+}
+
+/* Styles for larger screens */
+@media (min-width: 600px) {
+    /* Add styles for tablet and larger screens */
     body {
-        font-size: 16px; /* Ensure text is readable */
+        font-size: 18px; /* Adjust base font size for larger screens */
     }
-
+    
+    header {
+        display: flex; /* Use flexbox for header layout */
+        justify-content: space-between; /* Space out logo and navigation */
+    }
+    
     nav ul {
-        flex-direction: column; /* Stack navigation links */
-        gap: 10px;
-        padding: 0; /* Remove padding */
+        display: flex; /* Horizontal navigation */
+        list-style: none; /* Remove bullet points */
+        padding: 0; /* Remove default padding */
     }
 
-    nav a {
-        font-size: 1.2rem; /* Smaller font size for mobile */
+    nav ul li {
+        margin: 0 15px; /* Add space between navigation items */
     }
+}
 
-    .experience-section, .skills-section {
-        width: 100%; /* Full width on mobile */
-        float: none; /* Remove float */
-        margin: 0; /* Remove margin */
+/* Styles for desktop */
+@media (min-width: 960px) {
+    /* Additional styles for desktop screens */
+    .year-buttons {
+        display: flex; /* Arrange buttons in a row */
+        justify-content: center; /* Center the buttons */
     }
 
     .project-card {
-        max-height: 200px; /* Smaller card size */
-    }
-
-    .about-image img {
-        width: 100%; /* Full width on smaller screens */
-        margin-top: 0; /* Reset margin */
-        position: relative; /* Change to relative */
-        float: none; /* Reset float */
-    }
-
-    #hobbies {
-        flex-direction: column; /* Stack hobbies vertically */
-    }
-
-    .hobby {
-        flex-direction: column; /* Stack hobby image and content */
-        align-items: flex-start; /* Align items to the start */
-    }
-
-    .hobby img {
-        width: 100%; /* Full width on smaller screens */
-        margin-bottom: 10px; /* Space between image and text */
-    }
-
-    footer {
-        text-align: center; /* Center footer text */
+        display: inline-block; /* Align project cards horizontally */
+        margin: 10px; /* Space between cards */
     }
 }
