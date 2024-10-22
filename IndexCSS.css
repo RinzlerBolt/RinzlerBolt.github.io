@@ -241,6 +241,31 @@ ul {
     object-fit: contain;
 }
 
+.about-text {
+    flex: 1; /* Take up 60% of the available space */
+}
+
+.about-text h2 {
+    color: #e84545;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.about-image img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    float: right;
+    right: 300px;
+    margin-top: -225px;
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    position: absolute;
+}
+
 #hobbies {
   margin-top: 20px;
 }
@@ -319,16 +344,54 @@ footer {
 }
 
 
+/* Mobile Styles */
 @media (max-width: 768px) {
-    .experience-skills-container {
-        flex-direction: column; /* Stack experience and skills vertically on smaller screens */
+    body {
+        font-size: 16px; /* Ensure text is readable */
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Stack navigation links */
         gap: 10px;
+        padding: 0; /* Remove padding */
     }
+
     nav a {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+
+    .experience-section, .skills-section {
+        width: 100%; /* Full width on mobile */
+        float: none; /* Remove float */
+        margin: 0; /* Remove margin */
+    }
+
+    .project-card {
+        max-height: 200px; /* Smaller card size */
+    }
+
+    .about-image img {
+        width: 100%; /* Full width on smaller screens */
+        margin-top: 0; /* Reset margin */
+        position: relative; /* Change to relative */
+        float: none; /* Reset float */
+    }
+
+    #hobbies {
+        flex-direction: column; /* Stack hobbies vertically */
+    }
+
+    .hobby {
+        flex-direction: column; /* Stack hobby image and content */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .hobby img {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 10px; /* Space between image and text */
+    }
+
+    footer {
+        text-align: center; /* Center footer text */
     }
 }
