@@ -66,7 +66,7 @@ function toggleYear(yearId) {
     const isVisible = section.style.display === "block";
 
     // Hide all year sections
-    // document.querySelectorAll(".year-section").forEach(sec => (sec.style.display = "none"));
+    document.querySelectorAll(".year-section").forEach(sec => (sec.style.display = "none"));
 
     // Show the selected section if it was not visible
     if (!isVisible) section.style.display = "block";
