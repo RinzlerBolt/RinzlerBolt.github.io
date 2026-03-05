@@ -3,46 +3,32 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Jake Lawson</title>
+        <meta name="description" content="Jake Lawson - Game Developer portfolio showcasing projects in Unreal Engine, Unity, and more. Specializing in C++, C#, and game programming.">
+        <meta property="og:title" content="Jake Lawson - Game Developer Portfolio">
+        <meta property="og:description" content="Passionate game developer showcasing projects in Unreal Engine, Unity, AI pathfinding, and more.">
+        <meta property="og:type" content="website">
+        <title>Jake Lawson - Game Developer</title>
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="IndexCSS.css">
     </head>
-
-    <!-- <div id="intro-screen">
-        <h1>Welcome!</h1>
-    </div> -->
-    <!-- Sticky Bar & Logo -->
 
     <body>
         <div id="main-content">
             <header>
-                <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-                <img src="../images/Website_Logo2.png" alt="Logo Image" class="Logo-Pic">
-                <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776; <!-- This is the hamburger icon --></div>
+                <img src="images/Website_Logo2.png" alt="Jake Lawson Logo" class="Logo-Pic">
+                <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation menu" aria-expanded="false">&#9776;</button>
                 <nav aria-label="Main navigation">
-                    <ul id="nav-menu"> <!-- Changed id from nav-nenu to nav-menu -->
+                    <ul id="nav-menu">
                         <li><a href="#Awards">Awards</a></li>
                         <li><a href="#Portfolio">Portfolio</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#Social">Social</a></li>
                         <li><a href="#contact">Contact</a></li>
-                        <li><a href="JakeCV.pdf" target="_self">CV</a></li>
+                        <li><a href="JakeCV.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
                     </ul>
                 </nav>
             </header>
         </div>
-        
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                function toggleMenu() {
-                    const navMenu = document.getElementById('nav-menu'); // Make sure this matches the ID
-                    navMenu.classList.toggle('active');
-                }
-        
-                // Attach the click event to the hamburger icon
-                document.getElementById('hamburger').onclick = toggleMenu;
-            });
-        </script>
 
         <!-- Title Section -->
         <section class="title-section">
@@ -76,119 +62,91 @@
 
             <!-- Year Buttons -->
             <div class="year-buttons">
-                <button onclick="toggleYear('year-2024')">2024</button>
-                <button onclick="toggleYear('year-2023')">2023</button>
-                <button onclick="toggleYear('year-2022')">2022</button>
+                <button type="button" onclick="toggleYear('year-2024')">2024</button>
+                <button type="button" onclick="toggleYear('year-2023')">2023</button>
+                <button type="button" onclick="toggleYear('year-2022')">2022</button>
             </div>
 
             <!-- Year 2024 -->
             <div class="year-section" id="year-2024">
                 <h3>2024</h3>
-                <a href="HighwayCode.html" class="project-link">
-                    <div class="project-card">
-                        <h3>Highway Code</h3>
-                        <img src="images/HighwayCodeLogo.png" alt="Game 3 Image" class="project-image">
-                        <p></p>
-                    </div>
-                </a>
-                <!-- <div class="project-card">
-                    <h3>(Time Crisis Inspired Game)</h3>
-                    <img src="images/game3.png" alt="Game 3 Image" class="project-image">
-                    <p>A brief description of Game 3 developed in 2024.</p>
-                </div> -->
+                <div class="project-card">
+                    <a href="HighwayCode.html" class="project-link">
+                        <h4>Highway Code</h4>
+                        <img src="images/HighwayCodeLogo.png" alt="Highway Code project logo" class="project-image" loading="lazy">
+                    </a>
+                </div>
                 <div class="project-card">
                     <a href="TankSplineWave.html" class="project-link">
-                        <h3>Tank Simulator, Wave Spawner, and Spline Generation</h3>
-                        <img src="images/TankSplineWaveLogo.png" alt="Game 4 Image" class="project-image">
-                        <p></p>
+                        <h4>Tank Simulator, Wave Spawner, and Spline Generation</h4>
+                        <img src="images/TankSplineWaveLogo.png" alt="Tank Spline Wave project logo" class="project-image" loading="lazy">
                     </a>
                 </div>
                 <div class="project-card">
                     <a href="AI_Pathfinding.html" class="project-link">
-                        <h3>AI Pathfinding</h3>
-                        <img src="images/AIPathfindingLogo.png" alt="Game 4 Image" class="project-image">
-                        <p></p>
+                        <h4>AI Pathfinding</h4>
+                        <img src="images/AIPathfindingLogo.png" alt="AI Pathfinding project logo" class="project-image" loading="lazy">
                     </a>
                 </div>
             </div>
-            
-            
-        <!-- Year 2023 -->
-        <div class="year-section" id="year-2023">
-            <h3>2023</h3>
-            <div class="project-card">
-                <a href="Wolf's_Reign.html" class="project-link">
-                    <h3>Wolf's Reign</h3>
-                    <img src="images/WolfsReignLogo.png" alt="Game 1 Image" class="project-image">
-                    <p></p>
-                </a>
-            </div>
-            <div class="project-card">
-                <a href="CSGO_Pathfinding.html" class="project-link">
-                    <h3>CS:GO Styled AI</h3>
-                    <img src="images/CSGOAILogo.png" alt="Game 2 Image" class="project-image">
-                    <p></p>
-                </a>
-            </div>
-            <div class="project-card">
-                <a href="Dungeons.html" class="project-link">
-                    <h3>Procedurally Generated Dungeons</h4>
-                    <img src="images/ProcDungeonLogo.png" alt="Game 3 Image" class="project-image">
-                    <p></p>
-                </a>
-            </div>
-            <div class="project-card">
-                <a href="Heaven.html" class="project-link">
-                    <h3>Heaven</h5>
-                    <img src="images/HeavenLogo.png" alt="Game 4 Image" class="project-image">
-                    <p></p>
-                </a>
-            </div>
-            <div class="project-card">
-                <a href="MarioEngineClone.html" class="project-link">
-                    <h3>Mario Brothers Clone</h5>
-                    <img src="images/MarioBrosClone.png" alt="Game 4 Image" class="project-image">
-                    <p></p>
-                </a>
-            </div>
-        </div>
-    
-        <!-- Year 2022 -->
-        <div class="year-section" id="year-2022">
-            <h3>2022</h3>
-            <div class="project-card">
-                <a href="1945Clone.html" class="project-link">
-                    <h3>2D Top-Down 1945 Clone</h3>
-                    <img src="images/1945CloneLogo.png" alt="Game 1 Image" class="project-image">
-                    <p></p>
-                </a>
-            </div>
-            <div class="project-card">
-                <a href="MarbleMadness.html" class="project-link">
-                    <h3>Marble Madness Clone</h3>
-                    <img src="images/MadnessClone.png" alt="Game 2 Image" class="project-image">
-                    <p></p>
-                </a>
-            </div>
-            <div class="project-card">
-                <a href="Sentinel.html" class="project-link">
-                    <h3>Sentinel</h3>
-                    <img src="images/SentinelLogo.png" alt="Game 3 Image" class="project-image">
-                    <p></p>
-                </a>
-            <!-- </div>
-            <div class="project-card">
-                <a href="Virtuar.html" class="project-link">
-                    <h3>Virtuar</h3>
-                    <img src="images/VirtuarLogo.png" alt="Game 4 Image" class="project-image">
-                    <p>A brief description of Game 2 developed in 2022.</p>
-                </a>
-            </div> -->
-        </div>
-    </div>
-            
 
-            <!-- Add more year sections as needed -->
+            <!-- Year 2023 -->
+            <div class="year-section" id="year-2023">
+                <h3>2023</h3>
+                <div class="project-card">
+                    <a href="Wolf's_Reign.html" class="project-link">
+                        <h4>Wolf's Reign</h4>
+                        <img src="images/WolfsReignLogo.png" alt="Wolf's Reign project logo" class="project-image" loading="lazy">
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="CSGO_Pathfinding.html" class="project-link">
+                        <h4>CS:GO Styled AI</h4>
+                        <img src="images/CSGOAILogo.png" alt="CS:GO AI project logo" class="project-image" loading="lazy">
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="Dungeons.html" class="project-link">
+                        <h4>Procedurally Generated Dungeons</h4>
+                        <img src="images/ProcDungeonLogo.png" alt="Procedural Dungeons project logo" class="project-image" loading="lazy">
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="Heaven.html" class="project-link">
+                        <h4>Heaven</h4>
+                        <img src="images/HeavenLogo.png" alt="Heaven project logo" class="project-image" loading="lazy">
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="MarioEngineClone.html" class="project-link">
+                        <h4>Mario Brothers Clone</h4>
+                        <img src="images/MarioBrosClone.png" alt="Mario Brothers Clone project logo" class="project-image" loading="lazy">
+                    </a>
+                </div>
+            </div>
+
+            <!-- Year 2022 -->
+            <div class="year-section" id="year-2022">
+                <h3>2022</h3>
+                <div class="project-card">
+                    <a href="1945Clone.html" class="project-link">
+                        <h4>2D Top-Down 1945 Clone</h4>
+                        <img src="images/1945CloneLogo.png" alt="1945 Clone project logo" class="project-image" loading="lazy">
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="MarbleMadness.html" class="project-link">
+                        <h4>Marble Madness Clone</h4>
+                        <img src="images/MadnessClone.png" alt="Marble Madness Clone project logo" class="project-image" loading="lazy">
+                    </a>
+                </div>
+                <div class="project-card">
+                    <a href="Sentinel.html" class="project-link">
+                        <h4>Sentinel</h4>
+                        <img src="images/SentinelLogo.png" alt="Sentinel project logo" class="project-image" loading="lazy">
+                    </a>
+                </div>
+            </div>
         </section>
 
         <section id="about">
@@ -207,9 +165,8 @@
                 </div>
             </div>
         </section>
-        </section>
 
-        <section id ="experience-education-section">
+        <section id="experience-education-section">
             <div class="experience-section">
                 <h3>Experience</h3>
                 <div class="experience-item">
@@ -342,11 +299,11 @@
         <section id="Social">
             <h2>Socials</h2>
             <p>Here are some of my Socials</p>
-            <a href="https://www.linkedin.com/in/jake-a-lawson113/"target="_blank" rel="noopener noreferrer">
-                <img src="images/LinkedinLogo.png" alt="LinkedinLogo">
+            <a href="https://www.linkedin.com/in/jake-a-lawson113/" target="_blank" rel="noopener noreferrer">
+                <img src="images/LinkedinLogo.png" alt="LinkedIn">
             </a>
-            <a href="https://github.com/RinzlerBolt"target="_blank" rel="noopener noreferrer">
-                <img src="images/GithubLogo.png" alt="GithubLogo">
+            <a href="https://github.com/RinzlerBolt" target="_blank" rel="noopener noreferrer">
+                <img src="images/GithubLogo.png" alt="GitHub">
             </a>
             
         </section>
@@ -361,35 +318,17 @@
 
         <footer>
             <p>
-                &copy; 2024 Jake Lawson. All rights reserved. Right Click or Hold down CV and open new tab to get my CV. Fixing it. Email: jakelawdev@outlook.com
+                &copy; 2024 Jake Lawson. All rights reserved. Email: <a href="mailto:jakelawdev@outlook.com">jakelawdev@outlook.com</a>
             </p>
-            <img src="images/Website_Logo2.png" alt="Logo-Pic-Footer" class="Footer-Logo">
-            <a href="https://www.linkedin.com/in/jake-a-lawson113/"target="_blank" rel="noopener noreferrer" >
-                <img src="images/LinkedinLogo.png" alt="LinkedinLogo" class="Footer-Logo">
+            <img src="images/Website_Logo2.png" alt="Jake Lawson Logo" class="Footer-Logo">
+            <a href="https://www.linkedin.com/in/jake-a-lawson113/" target="_blank" rel="noopener noreferrer">
+                <img src="images/LinkedinLogo.png" alt="LinkedIn" class="Footer-Logo">
             </a>
-            <a href="https://github.com/RinzlerBolt"target="_blank" rel="noopener noreferrer">
-                <img src="images/GithubLogo.png" alt="GithubLogo" class="Footer-Logo">
+            <a href="https://github.com/RinzlerBolt" target="_blank" rel="noopener noreferrer">
+                <img src="images/GithubLogo.png" alt="GitHub" class="Footer-Logo">
             </a>
         </footer>
 
         <script src="Index.js"></script>
-
-        <script>
-            document.querySelectorAll('nav ul li a').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        const headerOffset = document.querySelector('header').offsetHeight;
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                        window.scrollTo({ top: offsetPosition + -20, behavior: 'smooth' });
-                    }
-                });
-            });
-        </script>
-
-        
     </body>
 </html>
