@@ -55,20 +55,28 @@ typeText();
 // Toggle Year Section Visibility
 function toggleYear(yearId) {
     const section = document.getElementById(yearId);
-    const isVisible = section.style.display === "block";
+    const isVisible = section.classList.contains('visible');
 
-    document.querySelectorAll(".year-section").forEach(sec => (sec.style.display = "none"));
+    // Hide all year sections
+    document.querySelectorAll(".year-section").forEach(sec => sec.classList.remove('visible'));
 
-    if (!isVisible) section.style.display = "block";
+    // Remove active state from all buttons
+    document.querySelectorAll(".year-buttons button").forEach(btn => btn.classList.remove('active'));
+
+    // Show the selected section if it was not visible
+    if (!isVisible) {
+        section.classList.add('visible');
+        // Find the matching button and set it as active
+        document.querySelectorAll(".year-buttons button").forEach(btn => {
+            if (btn.textContent === yearId.replace('year-', '')) {
+                btn.classList.add('active');
+            }
+        });
+    }
 }
 
-// Open link on project card click
-document.querySelectorAll(".project-card").forEach(card => {
-    card.addEventListener("click", () => {
-        const link = card.getAttribute("data-link");
-        if (link) window.open(link, "_blank");
-    });
-});
+// Show 2024 by default on page load
+toggleYear('year-2024');
 
 // Hamburger menu toggle
 (function() {
@@ -87,7 +95,8 @@ document.querySelectorAll(".project-card").forEach(card => {
 document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
-        if (!href.startsWith('#')) return;
+        // Skip non-anchor links (like the CV download link)
+        if (!href || !href.startsWith('#')) return;
         e.preventDefault();
         const targetElement = document.querySelector(href);
         if (targetElement) {
