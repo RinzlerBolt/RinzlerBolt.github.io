@@ -435,7 +435,7 @@ footer a {
     transform: scale(1.1);
 }
 
-/* Responsive styles for mobile */
+/* Responsive styles for tablet and mobile */
 @media only screen and (max-width: 960px) {
     #main-content {
         position: sticky;
@@ -529,6 +529,10 @@ footer a {
         text-align: center;
     }
 
+    .about-image img {
+        width: 200px;
+    }
+
     .hobby {
         flex-direction: column;
         text-align: center;
@@ -549,7 +553,80 @@ footer a {
     }
 
     .year-section.visible {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    section {
+        margin: 10px 12px;
+        padding: 30px 16px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Small mobile styles */
+@media only screen and (max-width: 600px) {
+    .title-content h1 {
+        font-size: 1.3rem;
+    }
+
+    #rotating-text {
+        font-size: 1.3rem;
+    }
+
+    .title-content {
+        padding: 15px 18px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    .about-image img {
+        width: 180px;
+    }
+
+    .hobby img {
+        width: 120px;
+    }
+
+    .year-buttons button {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    .year-section.visible {
         grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 120px;
+    }
+
+    section {
+        margin: 8px 8px;
+        padding: 25px 12px;
+    }
+
+    .experience-section,
+    .education-section,
+    .skills-section {
+        padding: 15px;
+    }
+
+    .skills-section li {
+        font-size: 0.85rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
     }
 }
 
