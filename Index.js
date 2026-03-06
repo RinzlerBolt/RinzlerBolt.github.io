@@ -66,12 +66,11 @@ function toggleYear(yearId) {
     // Show the selected section if it was not visible
     if (!isVisible) {
         section.classList.add('visible');
-        // Find the matching button and set it as active
-        document.querySelectorAll(".year-buttons button").forEach(btn => {
-            if (btn.textContent === yearId.replace('year-', '')) {
-                btn.classList.add('active');
-            }
-        });
+        // Find the matching button via data-year attribute and set it as active
+        const matchingBtn = document.querySelector(`.year-buttons button[data-year="${yearId}"]`);
+        if (matchingBtn) {
+            matchingBtn.classList.add('active');
+        }
     }
 }
 
