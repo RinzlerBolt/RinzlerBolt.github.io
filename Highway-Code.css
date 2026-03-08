@@ -200,7 +200,7 @@ footer a {
     color: #e84545;
 }
 
-/* Responsive styles for mobile */
+/* Responsive styles for tablet */
 @media only screen and (max-width: 768px) {
     .game-overview {
         flex-direction: column;
@@ -213,6 +213,57 @@ footer a {
 
     .screenshots-grid {
         grid-template-columns: 1fr;
+    }
+
+    .main-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .game-details-container {
+        padding: 20px 12px;
+        gap: 25px;
+    }
+}
+
+/* Responsive styles for small mobile */
+@media only screen and (max-width: 480px) {
+    .main-header {
+        padding: 12px;
+    }
+
+    .main-header nav a {
+        font-size: 1rem;
+    }
+
+    .game-info h2 {
+        font-size: 1.1rem;
+    }
+
+    .game-info p {
+        font-size: 0.9rem;
+    }
+
+    .game-overview,
+    .my-contributions,
+    .project-details,
+    .post-mortem {
+        padding: 14px;
+    }
+
+    .my-contributions ul {
+        margin-left: 12px;
+    }
+
+    .my-contributions li,
+    .project-details p {
+        font-size: 0.9rem;
+    }
+
+    .screenshots-section h2,
+    .video-section h2,
+    .post-mortem h2,
+    .my-contributions h2 {
+        font-size: 1.2rem;
     }
 }
 

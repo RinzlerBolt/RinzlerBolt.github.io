@@ -74,8 +74,7 @@ function toggleYear(yearId) {
     }
 }
 
-// Show 2024 by default on page load
-toggleYear('year-2024');
+// Year 2024 shown by default via HTML classes (visible on year-section, active on button)
 
 // Hamburger menu toggle
 (function() {

@@ -147,7 +147,7 @@ section {
     border-radius: 10px;
 }
 
-#about p, #hobbies p, #Portfolio p, #Awards p {
+#about p, #hobbies p, #Portfolio p, #Awards p, #Research > p {
     max-width: 800px;
     margin: 0 auto;
     color: #f2f2f2;
@@ -435,7 +435,58 @@ footer a {
     transform: scale(1.1);
 }
 
-/* Responsive styles for mobile */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.research-card {
+    background-color: #1f4068;
+    padding: 24px;
+    border-radius: 10px;
+    text-align: left;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.research-card:hover {
+    transform: translateY(-5px);
+    background-color: #162447;
+}
+
+.research-card h4 {
+    margin-bottom: 10px;
+}
+
+.research-abstract {
+    color: #f2f2f2;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.research-card .research-link {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 8px 16px;
+    background-color: #e84545;
+    color: #1a1a2e;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.research-card .research-link:hover {
+    background-color: #903749;
+    color: #fff;
+}
+
+/* Responsive styles for tablet and mobile */
 @media only screen and (max-width: 960px) {
     #main-content {
         position: sticky;
@@ -529,6 +580,10 @@ footer a {
         text-align: center;
     }
 
+    .about-image img {
+        width: 200px;
+    }
+
     .hobby {
         flex-direction: column;
         text-align: center;
@@ -549,7 +604,92 @@ footer a {
     }
 
     .year-section.visible {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    section {
+        margin: 10px 12px;
+        padding: 30px 16px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+/* Small mobile styles */
+@media only screen and (max-width: 600px) {
+    .title-content h1 {
+        font-size: 1.3rem;
+    }
+
+    #rotating-text {
+        font-size: 1.3rem;
+    }
+
+    .title-content {
+        padding: 15px 18px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    .about-image img {
+        width: 180px;
+    }
+
+    .hobby img {
+        width: 120px;
+    }
+
+    .year-buttons button {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+
+    .year-section.visible {
         grid-template-columns: 1fr;
+    }
+
+    .project-image {
+        height: 120px;
+    }
+
+    section {
+        margin: 8px 8px;
+        padding: 25px 12px;
+    }
+
+    .experience-section,
+    .education-section,
+    .skills-section {
+        padding: 15px;
+    }
+
+    .skills-section li {
+        font-size: 0.85rem;
+    }
+
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .research-card {
+        padding: 18px;
+    }
+
+    .research-abstract {
+        font-size: 0.85rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
     }
 }
 
