@@ -106,31 +106,86 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
     });
 });
 
+// Add CSS animations for easter egg first
+const easterEggStyle = document.createElement('style');
+easterEggStyle.textContent = `
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes popIn {
+        0% {
+            opacity: 0;
+            transform: translateX(-50%) scale(0.5);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(-50%) scale(1);
+        }
+    }
+    
+    @keyframes slideInScale {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.3);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+    
+    @keyframes slideOutScale {
+        0% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        100% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.3);
+        }
+    }
+`;
+document.head.appendChild(easterEggStyle);
+
 // Easter Egg: Logo Click Counter
 (function() {
     let logoClickCount = 0;
     const CLICK_THRESHOLD = 10;
     let clickTimeout;
     
-    const logo = document.querySelector('.Logo-Pic');
-    
-    if (logo) {
+    // Wait for DOM to be ready
+    function initEasterEgg() {
+        const logo = document.querySelector('.Logo-Pic');
+        
+        if (!logo) {
+            console.log('Logo not found, retrying...');
+            setTimeout(initEasterEgg, 100);
+            return;
+        }
+        
+        console.log('Easter egg initialized on logo');
         logo.style.cursor = 'pointer';
+        
         logo.addEventListener('click', function(e) {
+            e.preventDefault();
             e.stopPropagation();
             logoClickCount++;
             
+            console.log('Logo clicked:', logoClickCount);
+            
             // Add spin animation
-            logo.style.animation = 'none';
-            setTimeout(() => {
-                logo.style.animation = 'spin 0.6s ease-in-out';
-            }, 10);
+            logo.classList.remove('logo-spin');
+            void logo.offsetWidth; // Trigger reflow to restart animation
+            logo.classList.add('logo-spin');
             
             // Show click feedback
             showClickFeedback(logoClickCount, CLICK_THRESHOLD);
             
             // Check if threshold reached
             if (logoClickCount === CLICK_THRESHOLD) {
+                console.log('Easter egg triggered!');
                 triggerEasterEgg();
                 logoClickCount = 0;
             }
@@ -157,27 +212,25 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
                 transform: translateX(-50%);
                 background: linear-gradient(135deg, #e84545, #903749);
                 color: white;
-                padding: 10px 20px;
+                padding: 12px 24px;
                 border-radius: 25px;
-                font-size: 0.9rem;
+                font-size: 0.95rem;
                 font-weight: bold;
                 z-index: 10000;
                 pointer-events: none;
-                animation: popIn 0.3s ease-out;
                 box-shadow: 0 4px 15px rgba(232, 69, 69, 0.4);
             `;
             document.body.appendChild(feedback);
         }
         
         feedback.textContent = `🎮 ${current}/${total}`;
-        feedback.style.opacity = '1';
+        feedback.style.animation = 'popIn 0.3s ease-out';
     }
     
     function removeClickFeedback() {
         const feedback = document.getElementById('logo-click-feedback');
         if (feedback) {
-            feedback.style.opacity = '0';
-            setTimeout(() => feedback.remove(), 300);
+            feedback.remove();
         }
     }
     
@@ -218,47 +271,20 @@ document.querySelectorAll('nav ul li a').forEach(anchor => {
             setTimeout(() => easterEgg.remove(), 500);
         }, 4000);
     }
+    
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initEasterEgg);
+    } else {
+        initEasterEgg();
+    }
 })();
 
-// Add CSS animations for easter egg
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes spin {
-        0% { transform: rotateY(0deg); }
-        100% { transform: rotateY(360deg); }
-    }
-    
-    @keyframes popIn {
-        0% {
-            opacity: 0;
-            transform: translateX(-50%) scale(0.7);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(-50%) scale(1);
-        }
-    }
-    
-    @keyframes slideInScale {
-        0% {
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(0.5) rotateX(90deg);
-        }
-        100% {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1) rotateX(0deg);
-        }
-    }
-    
-    @keyframes slideOutScale {
-        0% {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1) rotateX(0deg);
-        }
-        100% {
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(0.5) rotateX(-90deg);
-        }
+// Add spin class styling
+const spinStyle = document.createElement('style');
+spinStyle.textContent = `
+    .logo-spin {
+        animation: spin 0.6s ease-in-out !important;
     }
 `;
-document.head.appendChild(style);
+document.head.appendChild(spinStyle);
