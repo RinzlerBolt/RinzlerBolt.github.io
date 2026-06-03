@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Archives - A collection of completed and dormant projects by Jake Lawson available as learning resources.">
+    <title>Archives - Jake Lawson</title>
+    <link rel="stylesheet" href="Highway-Code.css">
+    <style>
+        .archives-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .archives-intro {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #f2f2f2;
+            background-color: #1a1a2e;
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        .archives-intro h2 {
+            color: #e84545;
+            margin-bottom: 15px;
+        }
+
+        .archives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .archive-card {
+            background-color: #1a1a2e;
+            border-left: 4px solid #e84545;
+            padding: 25px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .archive-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(232, 69, 69, 0.2);
+        }
+
+        .archive-card h3 {
+            color: #e84545;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .archive-card .status {
+            display: inline-block;
+            background-color: #4a90e2;
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            width: fit-content;
+        }
+
+        .archive-card p {
+            color: #f2f2f2;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .archive-link {
+            display: inline-block;
+            background-color: #e84545;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            align-self: flex-start;
+            font-weight: bold;
+        }
+
+        .archive-link:hover {
+            background-color: #903749;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .archives-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .archive-card {
+                padding: 20px;
+            }
+
+            .archives-intro {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1>Archives</h1>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <main class="archives-container">
+        <!-- Intro Section -->
+        <section class="archives-intro">
+            <h2>Learning Resources & Legacy Projects</h2>
+            <p>This collection features completed and dormant projects from my journey as a game developer. These repositories serve as learning resources, showcasing various programming techniques, game development approaches, and experimental implementations. Feel free to explore, learn, and build upon these projects!</p>
+        </section>
+
+        <!-- Archives Grid -->
+        <section class="archives-grid">
+            <!-- Project 1: Multiplayer Programming -->
+            <div class="archive-card">
+                <h3>Multiplayer Programming</h3>
+                <span class="status">Completed</span>
+                <p>An experiment on using NetCode in Unity to create microgames inspired from Warioware, but in a multiplayer setting. This project explores real-time synchronization and network programming concepts.</p>
+                <a href="https://github.com/RinzlerBolt/MultiplayerProgramming_2025" target="_blank" rel="noopener noreferrer" class="archive-link">View Repository</a>
+            </div>
+
+            <!-- Project 2: VR Home Movement Game -->
+            <div class="archive-card">
+                <h3>VR Home Movement Game</h3>
+                <span class="status">Completed</span>
+                <p>A VR game where you have to move furniture with somewhat sentience to a goal, all while avoiding obstacles and hazards in the world. Developed in Unreal Engine 5.4, this project demonstrates VR interaction design and physics-based gameplay.</p>
+                <a href="https://github.com/RinzlerBolt/MultiplayerProgramming_2025" target="_blank" rel="noopener noreferrer" class="archive-link">View Repository</a>
+            </div>
+
+            <!-- Project 3: AR Game Experiment -->
+            <div class="archive-card">
+                <h3>AR Game Experiment</h3>
+                <span class="status">Completed</span>
+                <p>A small mobile phone game with multiple options to experiment with AR usage in a mobile phone setting. Features include facial changes and block interaction mechanics. Developed in Unity for iOS and Android platforms.</p>
+                <a href="https://github.com/RinzlerBolt/AR_Project" target="_blank" rel="noopener noreferrer" class="archive-link">View Repository</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; Jake Lawson | <a href="index.html"> Home </a></p>
+    </footer>
+</body>
+</html>
